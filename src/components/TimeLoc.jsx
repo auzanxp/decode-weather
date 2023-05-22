@@ -1,6 +1,6 @@
 import React from "react";
 
-const Time = () => {
+const TimeLoc = () => {
   return (
     <>
       <div className="flex items-center justify-center my-6 ">
@@ -15,4 +15,4 @@ const Time = () => {
   );
 };
 
-export default Time;
+export default TimeLoc;
