@@ -21,11 +21,11 @@ const ListCity = ({ action }) => {
   ];
 
   return (
-    <div className="flex items-center justify-around my-6">
+    <div className="flex flex-wrap items-center justify-around my-6">
       {cities.map((city) => (
         <button
           key={city.id}
-          className="text-white text-lg font-medium transform hover:scale-125 hover:shadow-white duration-300 ease-in-out"
+          className="text-white text-lg font-medium transform hover:scale-125 hover:shadow-white duration-300 ease-in-out mx-2 my-2 px-4 py-2 rounded-lg"
           onClick={() => action({ q: city.title })}
         >
           {city.title}
