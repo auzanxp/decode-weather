@@ -11,6 +11,7 @@ export default function App() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
+    document.title = 'Weather App';
     const getData = async () => {
       try {
         const data = await getFormatedWeatherData({ ...query });
