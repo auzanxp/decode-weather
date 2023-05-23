@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListCity = () => {
+const ListCity = ({ action }) => {
   const cities = [
     {
       id: 1,
@@ -25,8 +25,8 @@ const ListCity = () => {
       {cities.map((city) => (
         <button
           key={city.id}
-          className="text-white text-lg font-med
-            "
+          className="text-white text-lg font-medium"
+          onClick={() => action({q: city.title})}
         >
           {city.title}
         </button>

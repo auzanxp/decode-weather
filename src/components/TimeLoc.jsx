@@ -1,4 +1,5 @@
-import { formatToLocalTime } from "../services/weatherService";
+import { formatToLocalTime } from "../utils/formatWeather";
+
 
 const TimeLoc = ({ time }) => {
   return (
@@ -9,7 +10,7 @@ const TimeLoc = ({ time }) => {
         </p>
       </div>
       <div className=" flex items-center justify-center my-3">
-        <p className="text-white text-3xl font-medium">{`${time.name},${time.country}`}</p>
+        <p className="text-white text-3xl font-medium">{`${time.name}`}</p>
       </div>
       <div className="flex flex-row space-x-2 justify-center items-center">
         <div className="flex font-light text-sm items-center justify-center text-white">

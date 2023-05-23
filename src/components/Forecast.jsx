@@ -1,13 +1,10 @@
 import {
-  // UiLArrowUp,
-  // UiLArrowDown,
   UilTemperature,
   UilTear,
   UilWind,
-  UilSun,
-  UilSunset,
 } from "@iconscout/react-unicons";
-import { handleIconWeather } from "../services/weatherService";
+import { handleIconWeather } from "../utils/formatWeather";
+
 
 const Forecast = ({ title, data }) => {
   return (

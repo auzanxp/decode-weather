@@ -1,16 +1,13 @@
 import {
-  // UiLArrowUp,
-  // UiLArrowDown,
   UilTemperature,
-  UilTear,
   UilWind,
   UilSun,
   UilSunset,
 } from "@iconscout/react-unicons";
 import {
   formatToLocalTime,
-  handleIconWeather,
-} from "../services/weatherService";
+  handleIconWeather
+} from "../utils/formatWeather";
 
 const TemperatureDetails = ({ weather }) => {
   return (
