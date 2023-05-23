@@ -25,8 +25,8 @@ const ListCity = ({ action }) => {
       {cities.map((city) => (
         <button
           key={city.id}
-          className="text-white text-lg font-medium"
-          onClick={() => action({q: city.title})}
+          className="text-white text-lg font-medium transform hover:scale-125 hover:shadow-white duration-300 ease-in-out"
+          onClick={() => action({ q: city.title })}
         >
           {city.title}
         </button>

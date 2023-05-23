@@ -4,18 +4,16 @@ import ListCity from "./components/ListCity";
 import TemperatureDetails from "./components/TemperatureDetails";
 import TimeLoc from "./components/TimeLoc";
 import { getFormatedWeatherData } from "./services/WeatherService";
+import Loading from "./components/Loading";
 
 export default function App() {
   const [query, setQuery] = useState({ q: "jakarta" });
   const [weather, setWeather] = useState(null);
 
-  console.log({ query });
-
   useEffect(() => {
     const getData = async () => {
       try {
         const data = await getFormatedWeatherData({ ...query });
-        console.log(data);
         setWeather(data);
       } catch (error) {
         console.log(error);
@@ -27,9 +25,11 @@ export default function App() {
 
   return (
     <>
-      <div className="mx-auto max-w-screen-md mt-4 py-5 px-24 bg-gradient-to-br from-cyan-500 to-blue-700 h-fit shadow-xl shadow-gray-400">
+      <div className="mx-auto max-w-screen-md mt-4 py-5 px-10 md:px-24 bg-gradient-to-br from-cyan-500 to-blue-700 h-fit shadow-xl shadow-gray-400">
         <ListCity action={setQuery} />
-        {weather && (
+        {weather == null ? (
+          <Loading />
+        ) : (
           <>
             <TimeLoc time={weather} />
             <TemperatureDetails weather={weather} />

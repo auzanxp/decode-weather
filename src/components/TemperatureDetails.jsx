@@ -4,10 +4,7 @@ import {
   UilSun,
   UilSunset,
 } from "@iconscout/react-unicons";
-import {
-  formatToLocalTime,
-  handleIconWeather
-} from "../utils/formatWeather";
+import { formatToLocalTime, handleIconWeather } from "../utils/formatWeather";
 
 const TemperatureDetails = ({ weather }) => {
   return (
@@ -15,7 +12,7 @@ const TemperatureDetails = ({ weather }) => {
       <div className="flex items-center justify-center pt-3">
         <p className="text-white font-light text-xl">{weather.description}</p>
       </div>
-      <div className="flex flex-row items-center justify-center text-white px-3 space-x-3">
+      <div className="flex flex-col md:flex-row items-center justify-between md:justify-center text-white px-3 space-y-3 md:space-y-0 space-x-3">
         <img
           src={handleIconWeather(weather?.icon)}
           alt="image weather"
@@ -39,7 +36,7 @@ const TemperatureDetails = ({ weather }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center space-x-2 text-white text-sm pb-3">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-center space-x-2 text-white text-sm pb-3">
         <UilSun />
         <p className="font-light">
           {" "}

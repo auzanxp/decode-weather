@@ -5,7 +5,7 @@ const TimeLoc = ({ time }) => {
   return (
     <>
       <div className="flex items-center justify-center my-6 ">
-        <p className="text-white text-xl font-extralight">
+        <p className="text-white text-xl font-extralight text-center">
           {formatToLocalTime(time.dt, time.timezone)}
         </p>
       </div>
