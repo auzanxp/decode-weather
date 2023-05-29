@@ -13,6 +13,7 @@
     "@iconscout/react-unicons": "^2.0.2",
     "axios": "^1.4.0",
     "luxon": "^3.3.0",
+    "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-toastify": "^9.1.3"
