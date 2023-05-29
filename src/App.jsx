@@ -5,6 +5,7 @@ import TemperatureDetails from "./components/TemperatureDetails";
 import TimeLoc from "./components/TimeLoc";
 import { getFormatedWeatherData } from "./services/WeatherService";
 import Loading from "./components/Loading";
+import NProgress from "nprogress";
 
 export default function App() {
   const [query, setQuery] = useState({ q: "jakarta" });
@@ -14,10 +15,13 @@ export default function App() {
     document.title = "Weather App";
     const getData = async () => {
       try {
+        NProgress.start();
         const data = await getFormatedWeatherData({ ...query });
         setWeather(data);
+        NProgress.done();
       } catch (error) {
         console.log(error);
+        NProgress.done();
       }
     };
 
